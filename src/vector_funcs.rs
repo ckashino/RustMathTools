@@ -26,3 +26,12 @@ pub fn new_vec(x: i32, y:i32, z:i32) -> Vec3{
         z: z,
     }
 } 
+
+pub fn cross_prod(vector1: Vec3, vector2: Vec3) -> Vec3{
+
+    new_vec((vector1.y * vector2.z - vector1.z * vector2.y),
+    (vector1.z * vector2.x - vector1.x * vector2.z),
+    (vector1.x * vector2.y - vector1.y * vector2.x))
+
+
+}

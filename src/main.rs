@@ -5,7 +5,11 @@ use vector_funcs::*;
 fn main() {
 
 
-    let mut vector = new_vec(1, 1, 1);
-    println!("{}", vector);
+    let mut p = new_vec(1, 1, 1);
+    let mut q = new_vec(2, -3, 6);
+
+    let val = cross_prod(p, q);
+    
+    println!("{}", val);
 
 }
