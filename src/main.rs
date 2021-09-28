@@ -1,18 +1,11 @@
-struct Vec3 {
-    x: i32,
-    y: i32,
-    z: i32,
+mod vector_funcs;
 
-
-}
-
-fn newVec(x: i32, y:i32, z:i32) -> Vec3{
-
-    
-
-
-} 
+use vector_funcs::*;
 
 fn main() {
-    
+
+
+    let mut vector = new_vec(1, 1, 1);
+    println!("{}", vector);
+
 }
