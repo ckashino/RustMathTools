@@ -11,15 +11,9 @@ impl Vec3 {
 
     pub fn magnitude(&self) -> f64 {
         let temp_sum: f64 = f64::from(self.x.pow(2)) + f64::from(self.y.pow(2)) + f64::from(self.z.pow(2));
-
         let mag: f64 = temp_sum.sqrt();
-
         mag
-
-
     }
-
-
 }
 impl Display for Vec3{
     fn fmt (&self, f: &mut Formatter) -> fmt::Result{
