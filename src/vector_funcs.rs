@@ -5,11 +5,22 @@ pub struct Vec3 {
     x: i32,
     y: i32,
     z: i32,
+}
+
+impl Vec3 {
+
+    pub fn magnitude(&self) -> f64 {
+        let temp_sum: f64 = f64::from(self.x.pow(2)) + f64::from(self.y.pow(2)) + f64::from(self.z.pow(2));
+
+        let mag: f64 = temp_sum.sqrt();
+
+        mag
+
+
+    }
 
 
 }
-
-
 impl Display for Vec3{
     fn fmt (&self, f: &mut Formatter) -> fmt::Result{
         write!(f, "({}, {}, {})", self.x, self.y, self.z)    
@@ -17,21 +28,15 @@ impl Display for Vec3{
 }
 impl std::ops::Add for Vec3 {
     type  Output = Vec3;
-
     fn add(self, other: Vec3) -> Vec3 {
         Vec3 {x: self. x + other.x, y: self.y + other.y, z: self.z + other.z}
     }
-
-
 }
 impl std::ops::Sub for Vec3 {
     type  Output = Vec3;
-
     fn sub(self, other: Vec3) -> Vec3 {
         Vec3 {x: (self.x) - (other.x), y: (self.y) - (other.y), z: (self.z) - (other.z)}
     }
-
-
 }
 pub fn new_vec(x: i32, y:i32, z:i32) -> Vec3{
     Vec3{

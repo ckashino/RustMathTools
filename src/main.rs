@@ -11,6 +11,6 @@ fn main() {
     let cp = cross_prod(p, q);
     let dp = dot_prod(p,q);
 
-    println!("{}", p - q);
+    println!("{}", p.magnitude());
 
 }
