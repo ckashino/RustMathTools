@@ -8,8 +8,9 @@ fn main() {
     let mut p = new_vec(1, 1, 1);
     let mut q = new_vec(2, -3, 6);
 
-    let val = cross_prod(p, q);
-    
-    println!("{}", val);
+    let cp = cross_prod(p, q);
+    let dp = dot_prod(p,q);
+
+    println!("{}    {}", cp, dp);
 
 }

@@ -1,5 +1,6 @@
 use std::fmt::{self, Formatter, Display};
 
+#[derive(Copy, Clone)]
 pub struct Vec3 {
     x: i32,
     y: i32,
@@ -27,11 +28,15 @@ pub fn new_vec(x: i32, y:i32, z:i32) -> Vec3{
     }
 } 
 
-pub fn cross_prod(vector1: Vec3, vector2: Vec3) -> Vec3{
+pub fn cross_prod(v1: Vec3, v2: Vec3) -> Vec3{
+    new_vec((v1.y * v2.z - v1.z * v2.y),
+    (v1.z * v2.x - v1.x * v2.z),
+    (v1.x * v2.y - v1.y * v2.x))
+}
 
-    new_vec((vector1.y * vector2.z - vector1.z * vector2.y),
-    (vector1.z * vector2.x - vector1.x * vector2.z),
-    (vector1.x * vector2.y - vector1.y * vector2.x))
+pub fn dot_prod(v1: Vec3, v2: Vec3) -> i32{
+
+    v1.x * v2.x + v1.y * v2.y + v1.z * v2.z
 
 
 }
